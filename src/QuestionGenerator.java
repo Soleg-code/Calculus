@@ -107,4 +107,18 @@ public class QuestionGenerator {
 
         return questions;
     }
+
+    protected static List<Question> generateMediumQuestions(int nbQuestions) {
+        // Through the different diffculties, the random variable will closer to the real answer
+        // leading to a necessity of good answer
+        List<Question> questions = new ArrayList<Question>();
+        return questions;
+    }
+
+    protected static List<Question> generateHardQuestions(int nbQuestions) {
+        // Through the different diffculties, the random variable will closer to the real answer
+        // leading to a necessity of good answer
+        List<Question> questions = new ArrayList<Question>();
+        return questions;
+    }
 }

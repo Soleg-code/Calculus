@@ -44,16 +44,6 @@ public class Calculus2 extends JFrame {
         easyItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 startNewGame(QuestionGenerator.generateEasyQuestions(10));
-                // List<String> answers = List.of("Paris", "Berlin", "Londres", "Rome",
-                //         "Madrid");
-                // Question question = new Question("Quelle est la capitale de la France ?",
-                //         answers, 0);
-                // Question question2 = new Question("Quelle est la capitale de l'Allemagne ?",
-                //         answers, 1);
-                // Question question3 = new Question("Quelle est la capitale de l'Angleterre ?",
-                //         answers, 2);
-                // List<Question> questions = List.of(question, question2, question3);
-                // startNewGame(questions);
             }
         });
         mediumItem.addActionListener(new ActionListener() {
@@ -100,7 +90,7 @@ public class Calculus2 extends JFrame {
         mainPanel.add(answerPanel, c);
 
         nextButton = new JButton("Suivant");
-        nextButton.setPreferredSize(new Dimension(100, 30));
+        nextButton.setPreferredSize(new Dimension(200, 30));
         nextButton.setFont(new Font("Arial", Font.PLAIN, 14));
         nextButton.setEnabled(false);
         nextButton.addActionListener(new ActionListener() {
@@ -166,6 +156,13 @@ public class Calculus2 extends JFrame {
         answerPanel.repaint();
     }
 
+    private void clearAll() {
+        clearAnswerPanel();
+        questionPanel.removeAll();
+        questionPanel.revalidate();
+        questionPanel.repaint();
+    }
+
     private void nextQuestion() {
         indexQuestion++;
         if (indexQuestion < questions.size()) {
@@ -183,10 +180,9 @@ public class Calculus2 extends JFrame {
             questionPanel.removeAll();
             questionPanel.add(scoreLabel);
             answerPanel.removeAll();
-            nextButton.setText("Terminer");
+            nextButton.setText("C'est terminé");
             nextButton.setVisible(true);
-            nextButton.setEnabled(true);
-            // need to redirect to the menu.
+            nextButton.setEnabled(false);
         }
     }
 
