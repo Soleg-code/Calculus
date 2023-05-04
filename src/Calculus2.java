@@ -31,6 +31,7 @@ public class Calculus2 extends JFrame {
     private int score = 0; // the number of correct answers
     private int total = 0; // the number of questions
     private JLabel scoreLabel;
+    //private int timer; // The time taken to finish the questions
 
     public Calculus2() {// List<Question> questions) {
         super("CALCULUS");
@@ -48,12 +49,12 @@ public class Calculus2 extends JFrame {
         });
         mediumItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // startNewGame(QuestionGenerator.generateMediumQuestions());
+                startNewGame(QuestionGenerator.generateMediumQuestions(10));
             }
         });
         hardItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // startNewGame(QuestionGenerator.generateHardQuestions());
+                startNewGame(QuestionGenerator.generateHardQuestions(10));
             }
         });
 
@@ -241,16 +242,6 @@ public class Calculus2 extends JFrame {
     }
 
     public static void main(String[] args) {
-        // List<String> answers = List.of("Paris", "Berlin", "Londres", "Rome",
-        // "Madrid");
-        // Question question = new Question("Quelle est la capitale de la France ?",
-        // answers, 0);
-        // Question question2 = new Question("Quelle est la capitale de l'Allemagne ?",
-        // answers, 1);
-        // Question question3 = new Question("Quelle est la capitale de l'Angleterre ?",
-        // answers, 2);
-        // List<Question> questions = List.of(question, question2, question3);
-        // Calculus2 qcmInterface = new Calculus2(questions);
         Calculus2 qcmInterface = new Calculus2();
     }
 }
