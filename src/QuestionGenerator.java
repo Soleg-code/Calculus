@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import javax.lang.model.util.ElementScanner14;
 
 public class QuestionGenerator {
     protected static List<Question> generateEasyQuestions(int nbQuestions) {
