@@ -1,0 +1,1 @@
+java -XX:+ShowCodeDetailsInExceptionMessages -cp /home/antoine/.config/Code/User/workspaceStorage/5de70afcdd0919fb8fffa1ecec3505cf/redhat.java/jdt_ws/Calculus_75111547/bin src.main 
